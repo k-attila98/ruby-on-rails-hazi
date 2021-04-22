@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  author: MyString
+  petname: MyString
+  age: 1
+  description: MyText
+
+two:
+  author: MyString
+  petname: MyString
+  age: 1
+  description: MyText
