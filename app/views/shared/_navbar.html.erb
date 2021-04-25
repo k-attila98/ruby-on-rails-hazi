@@ -1,0 +1,32 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container d-flex justify-content-between">
+      <strong><%= link_to "Pet showroom", "/", :class => "navbar-brand d-flex align-items-center" %></strong>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <% unless session[:user_id] %>
+            <li class="nav-item">
+              <%=  link_to "Bejelentkezés", login_path, :class => "nav-link d-flex" %>
+            </li>
+          <% end %>
+
+          <% if session[:user_id] %>
+            <li class="nav-item">
+              <%=  button_to "Kijelentkezés", logout_path, method: :delete, :class => "btn btn-link nav-link d-flex" %>
+            </li>
+            <li class="nav-item">
+              <%=  link_to "Új poszt", new_post_path, :class => "nav-link d-flex" %>
+            </li>
+            <li class="nav-item">
+              <%=  link_to "Az én kedvenceim", root_path, :class => "nav-link d-flex" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

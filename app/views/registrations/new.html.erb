@@ -1,0 +1,45 @@
+<div class="container">
+  <p><br/></p>
+  <div class="py-5 text-center">
+    <h2>Regisztráció</h2>
+  </div>
+  <div class="row">
+    <div class="container">
+      <%= form_with model: @user, url: register_path do |form| %>
+
+        <% if @user.errors.any? %>
+          <div class="alert alert-danger">
+            <% @user.errors.full_messages.each do |message| %>
+              <div><%= message %></div>
+            <% end %>
+          </div>
+        <% end %>
+
+        <div class="mb-3">
+          <%= form.label :email %>
+          <%= form.text_field :email, class: "form-control", placeholder: "arvizturo@tukorfurogep.com" %>
+        </div>
+
+        <div class="mb-3">
+          <%= form.label :name, "Teljes név" %>
+          <%= form.text_field :name, class: "form-control", placeholder: "Gipsz Jakab" %>
+        </div>
+
+        <div class="mb-3">
+          <%= form.label :password, "Jelszó" %>
+          <%= form.password_field :password, class: "form-control"%>
+        </div>
+        <div class="mb-3">
+          <%= form.label :password_confirmation , "Jelszó megerősítése"%>
+          <%= form.password_field :password_confirmation, class: "form-control"%>
+        </div>
+
+        <div class="mb-3">
+          <%= form.submit "Regisztrálok", class: "btn btn-primary" %>
+          <%= link_to "Vissza", login_path, :class => "btn btn-link" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

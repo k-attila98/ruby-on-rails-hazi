@@ -1,0 +1,50 @@
+<div class="row m-0">
+  <div class="container col-md-3 pt-5">
+
+    <!--
+    <form class="form-signin" style="padding-top: 100px" method="post" novalidate>
+      <h1 class="h3 mb-3 font-weight-normal">Kérlek jelentkezz be</h1>
+
+      <label for="loginEmail" class="sr-only">E-mail cím</label>
+      <input type="email" id="loginEmail" name="email" class="form-control" placeholder="E-mail cím" required>
+      <br />
+
+      <label for="loginPassword" class="sr-only">Jelszó</label>
+      <input type="password" id="loginPassword" name="password" class="form-control" placeholder="Jelszó" required>
+
+      <div class="mb-3">Még nincs felhasználód? <a href="/register">Regisztrálj itt!</a></div>
+      <div class="mb-3">Elfelejtetted a jelszavad? <a href="/lost_password">Kérj újat itt!</a></div>
+
+
+      <input type="submit" class="btn btn-primary" aria-pressed="true" value="Bejelentkezés" />
+      <a href="/" class="btn btn-link" role="button" aria-pressed="true">Vissza</a>
+    </form>
+    -->
+
+    <%= form_with url: login_path do |form| %>
+
+      <h1 class="h3 mb-3 font-weight-normal">Kérlek jelentkezz be</h1>
+
+      <%= render partial: "shared/flash" %>
+
+      <div class="mb-3">
+        <%= form.label :email %>
+        <%= form.text_field :email, class: "form-control", placeholder: "E-mail cím" %>
+      </div>
+      <div class="mb-3">
+        <%= form.label :password, "Jelszó" %>
+        <%= form.password_field :password, class: "form-control", placeholder: "Jelszó" %>
+      </div>
+
+      <div class="mb-3">Még nincs felhasználód? <%= link_to "Regisztrálj itt!", register_path %></div>
+      <!-- <div class="mb-3">Elfelejtetted a jelszavad? <a href="/lost_password">Kérj újat itt!</a></div> -->
+
+      <div class="mb-3">
+        <%= form.submit "Bejelentkezés", class: "btn btn-primary" %>
+        <%= link_to "Vissza", root_path, :class => "btn btn-link" %>
+      </div>
+
+    <% end %>
+
+  </div>
+</div>
