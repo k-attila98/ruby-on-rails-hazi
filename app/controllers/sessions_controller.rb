@@ -18,4 +18,13 @@ class SessionsController < ApplicationController
         redirect_to root_path, notice: "Sikeres kijelentkezés"
     end
 
+    def lost_password
+        user = User.find_by(email: params[:email])
+
+        if user.present?
+            puts user[:password]
+            redirect_to login_path
+        end
+    end
+
 end

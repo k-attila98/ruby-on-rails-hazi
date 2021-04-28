@@ -1,0 +1,66 @@
+
+<main role="main">
+  <div class="album py-5">
+    <div class="container">
+
+      <%= render partial: "shared/flash" %>
+      <h3 class="mb-1">Saját posztjaim</h3>
+      <div class="row">
+
+        <div class="col-md-12">
+          <table class="table table-striped table-bordered">
+            <tr>
+              <th>
+                Kedvenc neve
+              </th>
+              <th>
+                Kedvenc kora
+              </th>
+              <th>
+                Kedvenc fajtája
+              </th>
+              <th>
+                Kedvenc leírása
+              </th>
+              <th>
+                Műveletek
+              </th>
+            </tr>
+
+            <% @posts.each do |post| %>
+              <tr>
+                <td>
+                  <%= post.petname %>
+                </td>
+                <td>
+                  <%= post.age %>
+                </td>
+                <td>
+                  <%= post.species %>
+                </td>
+                <td>
+                  <%= post.description %>
+                </td>
+                <td>
+                  <!--
+                  <i class="far fa-address-book"></i>
+                  <%= link_to ("<i class=\"fas fa-user-edit\"></i>").html_safe, post_path(post.id) %>
+                  <%= link_to ("<i class=\"fas fa-edit\"></i>").html_safe, edit_post_path(post.id) %>
+                  <%= link_to ("<i class=\"fas fa-trash-alt\">").html_safe, my_posts_path(post.id), method: :delete %>-->
+
+                  <%= link_to "View", post_path(post.id) %>
+                  <%= link_to "Edit", edit_post_path(post.id) %>
+                  <!-- TODO: lacitól megkérdezni hogy ezt hogyan lehetne -->
+                  <%= link_to "Delete", post_path(post.id), method: :delete %>
+                </td>
+              </tr>
+            <% end %>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="348" height="225" viewBox="0 0 348 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="17" style="font-weight:bold;font-size:17pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text></svg>

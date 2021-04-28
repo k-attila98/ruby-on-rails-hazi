@@ -7,8 +7,13 @@ Rails.application.routes.draw do
     get "register", to: "registrations#new"
     post "register", to: "registrations#create"
 
+    get "lost_password", to: "sessions#lost_password"
+    post "lost_password", to: "sessions#lost_password"
+
     get "new_post", to: "posts#new"
     post "new_post", to: "posts#create"
+
+    get "my_posts", to: "posts#my_posts"
 
     delete "logout", to: "sessions#destroy"
 
