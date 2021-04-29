@@ -4,13 +4,18 @@ class RegistrationsController < ApplicationController
     end
 
     def create
-        @user = User.new(user_params)
-        if @user.save
-            # session cookie beállítás, innen lehet nézni hogy be van e jelentkezve
-            session[:user_id] = @user.id
-            redirect_to root_path, notice: "Sikeres regisztráció!"
+
+        if User.exists?(user_params[:email])
+            redirect_to register_path, alert: "Már regisztráltak ezzel az e-maillel!"
         else
-            render :'registrations/new'
+            @user = User.new(user_params)
+            if @user.save
+                # session cookie beállítás, innen lehet nézni hogy be van e jelentkezve
+                session[:user_id] = @user.id
+                redirect_to root_path, notice: "Sikeres regisztráció!"
+            else
+                render :'registrations/new'
+            end
         end
     end
 

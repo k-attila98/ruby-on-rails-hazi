@@ -1,10 +1,9 @@
-
 <main role="main">
   <div class="album py-5">
     <div class="container">
 
       <%= render partial: "shared/flash" %>
-      <h3 class="mb-1">Saját posztjaim</h3>
+      <h3 class="mb-2">Saját posztjaim</h3>
       <div class="row">
 
         <div class="col-md-12">
@@ -50,8 +49,7 @@
 
                   <%= link_to "View", post_path(post.id) %>
                   <%= link_to "Edit", edit_post_path(post.id) %>
-                  <!-- TODO: lacitól megkérdezni hogy ezt hogyan lehetne -->
-                  <%= link_to "Delete", post_path(post.id), method: :delete %>
+                  <%= button_to "Delete", post_path(post.id), method: :delete, class: "btn btn-link p-0 m-0" %>
                 </td>
               </tr>
             <% end %>
