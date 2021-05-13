@@ -1,0 +1,21 @@
+
+    <%= form_with model: @user do |form| %>
+
+      <%= render partial: "shared/flash" %>
+
+      <div class="mb-3">
+        <%= form.label :name, "Gazda neve" %>
+        <%= form.text_field :name, class: "form-control", placeholder: "Név", :required => true %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :email, "Gazda emailje" %>
+        <%= form.text_field :email, class: "form-control", placeholder: "E-mail", :required => true %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.submit "Változtatások mentése", class: "btn btn-primary" %>
+        <%= link_to "Mégse", profile_path(session[:user_id]), :class => "btn btn-link", :required => true %>
+      </div>
+
+    <% end %>

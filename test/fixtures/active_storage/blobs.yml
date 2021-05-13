@@ -1,0 +1,17 @@
+post_one_blob:
+  key: 4uxemf3rwkko3bz2q1kslwqv0q65
+  filename: dog1.jpeg
+  content_type: image/jpeg
+  metadata: '{"identified":true,"analyzed":true}'
+  byte_size: <%= File.size('tmp/storage/4u/xe/4uxemf3rwkko3bz2q1kslwqv0q65/dog1.jpeg') %>
+  checksum: <%= Digest::MD5.file('tmp/storage/4u/xe/4uxemf3rwkko3bz2q1kslwqv0q65/dog1.jpeg').base64digest %>
+  service_name: local
+
+post_two_blob:
+  key: f2qh64bvv0wulcwc29z891j7o4ff
+  filename: snek1.jpeg
+  content_type: image/jpeg
+  metadata: '{"identified":true,"analyzed":true}'
+  byte_size: <%= File.size('tmp/storage/f2/qh/f2qh64bvv0wulcwc29z891j7o4ff/snek1.jpeg') %>
+  checksum: <%= Digest::MD5.file('tmp/storage/f2/qh/f2qh64bvv0wulcwc29z891j7o4ff/snek1.jpeg').base64digest %>
+  service_name: local

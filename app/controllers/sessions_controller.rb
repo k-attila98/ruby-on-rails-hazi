@@ -18,12 +18,6 @@ class SessionsController < ApplicationController
         redirect_to root_path, notice: "Sikeres kijelentkezés"
     end
 
-    def lost_password
-        user = User.find_by(email: params[:email])
-        if user.present?
-            puts(user[:password_digest])
-            redirect_to login_path, notice: "A jelszó hash a terminálon van!"
-        end
-    end
+
 
 end

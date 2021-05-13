@@ -1,13 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  author: MyString
-  petname: MyString
-  age: 1
-  description: MyText
+post_one:
+  petname: "Józsi"
+  age: 16
+  description: "Az első vakolókanalam. Még mindignem tudom használni, sajnos"
+  species: "vakolókanál"
+  user: user_one
 
-two:
-  author: MyString
-  petname: MyString
-  age: 1
-  description: MyText
+post_two:
+  petname: "Peti"
+  age: 27
+  description: "A kedvenc malteresbödönöm, mindig ebben hordom a maltert"
+  species: "malteresbödön"
+  user: user_one

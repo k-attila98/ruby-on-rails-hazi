@@ -1,0 +1,11 @@
+<main role="main">
+  <div class="container">
+    <div class="m-4">
+
+      <h3>Gazda neve: <%= @user.name %></h3>
+      <p>Gazda emailje: <%= @user.email %></p>
+      <%= link_to "Profil szerkesztése", profile_edit_path(session[:user_id]) %>
+    </div>
+
+  </div>
+</main>

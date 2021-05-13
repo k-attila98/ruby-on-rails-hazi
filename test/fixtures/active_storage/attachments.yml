@@ -1,0 +1,9 @@
+post_one_picture:
+  name: image
+  record: post_one (Post)
+  blob: post_one_blob
+
+post_two_picture:
+  name: image
+  record: post_two (Post)
+  blob: post_two_blob
