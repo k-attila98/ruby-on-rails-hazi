@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+user_one:
+  name: "Kőműves Kelemen"
+  password_digest: <%= BCrypt::Password.create("komuveles") %>
+  email: "kelemen@komuves.hu"
+
+user_two:
+  name: "Kőműves Kelemenné"
+  password_digest: <%= BCrypt::Password.create("befalazva") %>
+  email: "kelemenne@komuves.hu"
