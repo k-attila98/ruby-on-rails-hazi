@@ -42,7 +42,7 @@ class UsersController < ApplicationController
             @user = User.new(user_params)
             if @user.save
                 # session cookie beállítás, innen lehet nézni hogy be van e jelentkezve
-                //session[:user_id] = @user.id
+                # session[:user_id] = @user.id
                 redirect_to login_path, notice: "Sikeres regisztráció!"
             else
                 render :'users/new'

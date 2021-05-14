@@ -1,9 +1,6 @@
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
-  test "the truth" do
-    assert true
-  end
 
   test "cannot save user without name" do
     u = User.new email: "asd@asd.hu", password_digest: "asdasd"
