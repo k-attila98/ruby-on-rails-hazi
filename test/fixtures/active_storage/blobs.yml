@@ -3,8 +3,8 @@ post_one_blob:
   filename: dog1.jpeg
   content_type: image/jpeg
   metadata: '{"identified":true,"analyzed":true}'
-  byte_size: <%= File.size('tmp/storage/4u/xe/4uxemf3rwkko3bz2q1kslwqv0q65/dog1.jpeg') %>
-  checksum: <%= Digest::MD5.file('tmp/storage/4u/xe/4uxemf3rwkko3bz2q1kslwqv0q65/dog1.jpeg').base64digest %>
+  byte_size: <%= File.size('tmp/storage/4u/xe/4uxemf3rwkko3bz2q1kslwqv0q65') %>
+  checksum: <%= Digest::MD5.file('tmp/storage/4u/xe/4uxemf3rwkko3bz2q1kslwqv0q65').base64digest %>
   service_name: local
 
 post_two_blob:
@@ -12,6 +12,10 @@ post_two_blob:
   filename: snek1.jpeg
   content_type: image/jpeg
   metadata: '{"identified":true,"analyzed":true}'
-  byte_size: <%= File.size('tmp/storage/f2/qh/f2qh64bvv0wulcwc29z891j7o4ff/snek1.jpeg') %>
-  checksum: <%= Digest::MD5.file('tmp/storage/f2/qh/f2qh64bvv0wulcwc29z891j7o4ff/snek1.jpeg').base64digest %>
+  byte_size: <%= File.size('tmp/storage/f2/qh/f2qh64bvv0wulcwc29z891j7o4ff') %>
+  checksum: <%= Digest::MD5.file('tmp/storage/f2/qh/f2qh64bvv0wulcwc29z891j7o4ff').base64digest %>
   service_name: local
+
+# sajnálom, így tudtam működésre bírni, ha nem megy, akkor a tmp/storageban létre kell hozni azokat a fileokat amik a byte size-nál
+# vannak, és úgy már betölt az oldal, az active storage miatt volt erre szükség
+# simán csak egy kép kell, és elnevezni kiterjesztés nélkül a "key"-ként
