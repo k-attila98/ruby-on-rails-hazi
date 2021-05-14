@@ -41,12 +41,6 @@
                   <%= post.description %>
                 </td>
                 <td>
-                  <!--
-                  <i class="far fa-address-book"></i>
-                  <%= link_to ("<i class=\"fas fa-user-edit\"></i>").html_safe, post_path(post.id) %>
-                  <%= link_to ("<i class=\"fas fa-edit\"></i>").html_safe, edit_post_path(post.id) %>
-                  <%= link_to ("<i class=\"fas fa-trash-alt\">").html_safe, my_posts_path(post.id), method: :delete %>-->
-
                   <%= link_to "Megnézem", post_path(post.id) %>
                   <%= link_to "Szerkesztés", edit_post_path(post.id) %>
                   <%= button_to "Törlés", post_path(post.id), method: :delete, class: "btn btn-link p-0 m-0" %>

@@ -3,11 +3,31 @@
     <div class="m-4">
 
       <%= image_tag(@post.image, style: "width: 50%", class: "mb-3") %>
-      <h3>Kedvenc gazdája: <%= @user.name %></h3>
-      <p>Kedvenc neve: <%= @post.petname %></p>
-      <p>Kedvenc kora: <%= @post.age %></p>
-      <p>Fajtája: <%= @post.species %></p>
-      <p>Leírás: <%= @post.description %></p>
+
+      <table class="table table-striped">
+        <tbody>
+        <tr>
+          <th scope="row">Kedvenc gazdája:</th>
+          <td><%= @user.name %></td>
+        </tr>
+        <tr>
+          <th scope="row">Kedvenc neve:</th>
+          <td><%= @post.petname %></td>
+        </tr>
+        <tr>
+          <th scope="row">Kedvenc kora:</th>
+          <td><%= @post.age %></td>
+        </tr>
+        <tr>
+          <th scope="row">Fajtája:</th>
+          <td><%= @post.species %></td>
+        </tr>
+        <tr>
+          <th scope="row">Leírás:</th>
+          <td><%= @post.description %></td>
+        </tr>
+        </tbody>
+      </table>
     </div>
 
   </div>
