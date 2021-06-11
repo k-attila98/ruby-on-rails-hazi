@@ -1,24 +1,14 @@
-# README
+# Ruby on Rails házi - Pet Showroom
+## Feature-ök
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+- regisztráció
+- login
+- poszt feltöltése
+- posztok menedzselése (törlés, szerkesztés, megnézés)
 
-* Ruby version
+## Indítás
+A projekt mappájában "rails s" parancs.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Adatázis user
+root-root username és jelszó
